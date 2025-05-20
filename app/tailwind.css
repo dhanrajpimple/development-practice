@@ -10,3 +10,47 @@ body {
     color-scheme: dark;
   }
 }
+
+
+.top-shadow {
+  position: relative;
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.custom-border {
+  border-width: 0px 0.5px 1px 0.5px; /* Top: 0px, Right: 3px, Bottom: 3px, Left: 3px */
+  border-style: solid;
+ border-color: blue;
+
+  /* ✅ Fix for visible rounded corners */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-clip: padding-box; /* Ensures the background stays inside the border */
+  overflow: hidden; /* Prevents border from covering the radius */
+}
+
+
+.gradient-text {
+  background: linear-gradient(89.29deg, #FFFFFF 49.86%, #440099 100.92%, #440099 104.63%),
+              linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.custom-shadow {
+  box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -4px var(--shadow-color);
+
+}
